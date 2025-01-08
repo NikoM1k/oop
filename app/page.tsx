@@ -1,101 +1,145 @@
 import Image from "next/image";
+import AvatarImage from "@/components/avatar-image";
+import Select from "@/components/select";
+import Button from "@/components/button";
+import EventCard from "@/components/event-card";
+import HumanCard from "@/components/human-card";
+import NavSection from "@/components/nav-section";
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
+    interface EventCard {
+        title: string;
+        description: string;
+    }
+
+    interface HumanCard {
+        name: string;
+        description: string;
+        skills: string[];
+    }
+
+
+    const eventCards: EventCard[] = [
+        {
+            title: "добровольное самоорганизующееся сообщество специалистов ... добровольное самоорганизующееся сообщество специалистов ...",
+            description: "добровольное самоорганизующееся сообщество специалистов г. Донецка и Донецкого края в области добровольное самоорганизующееся сообщество специалистов г. Донецка и Донецкого края в области..."
+        },
+        {
+            title: "добровольное самоорганизующееся сообщество специалистов ... добровольное самоорганизующееся сообщество специалистов ...",
+            description: "добровольное самоорганизующееся сообщество специалистов г. Донецка и Донецкого края в области добровольное самоорганизующееся сообщество специалистов г. Донецка и Донецкого края в области..."
+        },
+        {
+            title: "добровольное самоорганизующееся сообщество специалистов ... добровольное самоорганизующееся сообщество специалистов ...",
+            description: "добровольное самоорганизующееся сообщество специалистов г. Донецка и Донецкого края в области добровольное самоорганизующееся сообщество специалистов г. Донецка и Донецкого края в области..."
+        },
+        {
+            title: "добровольное самоорганизующееся сообщество специалистов ... добровольное самоорганизующееся сообщество специалистов ...",
+            description: "добровольное самоорганизующееся сообщество специалистов г. Донецка и Донецкого края в области добровольное самоорганизующееся сообщество специалистов г. Донецка и Донецкого края в области..."
+        },
+        {
+            title: "добровольное самоорганизующееся сообщество специалистов ... добровольное самоорганизующееся сообщество специалистов ...",
+            description: "добровольное самоорганизующееся сообщество специалистов г. Донецка и Донецкого края в области добровольное самоорганизующееся сообщество специалистов г. Донецка и Донецкого края в области..."
+        },
+    ]
+
+    const humans: HumanCard[] = [
+        {
+            name: "Лукашенко Марина Анатольевна",
+            description: "Финансовые изменения, болезнь, своя или близких, разрыв отношений, развод...",
+            skills: ["Терапевт", "Супервизор", "Тренер-стажер", "Тренер", "Ассоциированный тренер", "Ведущий тренер"]
+        },
+        {
+            name: "Лукашенко Марина Анатольевна",
+            description: "Финансовые изменения, болезнь, своя или близких, разрыв отношений, развод...",
+            skills: ["Терапевт", "Супервизор", "Тренер-стажер", "Тренер", "Ассоциированный тренер", "Ведущий тренер"]
+        },
+        {
+            name: "Лукашенко Марина Анатольевна",
+            description: "Финансовые изменения, болезнь, своя или близких, разрыв отношений, развод...",
+            skills: ["Терапевт", "Супервизор", "Тренер-стажер", "Тренер", "Ассоциированный тренер", "Ведущий тренер"]
+        },
+        {
+            name: "Лукашенко Марина Анатольевна",
+            description: "Финансовые изменения, болезнь, своя или близких, разрыв отношений, развод...",
+            skills: ["Терапевт", "Супервизор", "Тренер-стажер", "Тренер", "Ассоциированный тренер", "Ведущий тренер"]
+        }
+    ]
+  return (
+      <main className="pt-[100px] flex flex-col">
+          <div className="flex flex-col container m-auto text-center text-dark gap-[31px]">
+              <h1 className="text-[40px] uppercase">Донецкое гештальт сообщество</h1>
+              <p className="text-dark text-[19px] max-w-[832px] mx-auto">это добровольное самоорганизующееся сообщество
+                  специалистов г. Донецка и Донецкого края в области психологического консультирования и
+                  гештальт-терапии.</p>
+          </div>
+          <div className="flex justify-center mt-[100px] gap-[14px] container mx-auto">
+              <div
+                  className="relative bg-blue border-[1px] border-white rounded-[25px] pr-[48px] max-w-[650px] min-h-[480px] w-full font-[400]">
+                  <Image src="/images/intro.svg" alt="intro" className="w-auto h-auto absolute" width={1} height={1}/>
+                  <h3 className="text-white text-[38px] mt-[214px] text-end leading-[41px]">
+                      <span className="bg-darkBlue px-[12px] py-[3px] rounded-[18px]">Цель</span> нашего<br/>объединения:
+                  </h3>
+                  <p className="ml-auto mt-[50px] text-start text-white text-[19px] leading-[20px] max-w-[400px]">взаимное
+                      обогащение профессиональными знаниями, идеями и опытом на конференциях и семинарах, в учебных
+                      программах и на интенсивах, на специализациях и в супервизорских группах.</p>
+              </div>
+              <div className="flex flex-col gap-[12px] max-w-[368px]">
+                  <div className="flex items-center bg-blue rounded-[25px] min-h-[234px] px-[68px] py-[60px] relative">
+                      <p className="text-white font-[500] leading-[23px] text-[20px]">Через собственное развитие мы
+                          развиваем и популяризируем гештальт-подход</p>
+                      <Image src="/images/palm.svg" alt="palm" className="w-auto h-auto absolute right-3 bottom-0"
+                             width={1} height={1}/>
+                  </div>
+                  <div
+                      className="flex flex-col items-center rounded-[25px] min-h-[234px] px-[68px] pt-[60px] border-[4px] border-white">
+                      <div className="flex">
+                          <AvatarImage imageUrl='avatar'/>
+                          <AvatarImage imageUrl='avatar' className="right-[35px] z-2"/>
+                          <AvatarImage imageUrl='avatar' className="right-[70px] z-3"/>
+                          <AvatarImage imageUrl='avatar' className="right-[105px] z-4"/>
+                      </div>
+                      <p className="text-blue font-[900] text-[26px] mt-[10px]">+ 145 учасников</p>
+                  </div>
+              </div>
+          </div>
+          <div className="mt-[50px] flex gap-[64px] justify-center container mx-auto">
+              <div className="flex-col flex gap-[35px] items-center">
+                  <Image src="images/oppgp.svg" alt="oppgp" width={140} height={37}/>
+                  <p className="text-grey max-w-[300px] text-[16px] leading-[17px] text-center">Донецкое
+                      гештальт-сообщество является частью Всероссийского общества психологов практикующих
+                      гештальт-подход (ОПП ГП). </p>
+              </div>
+              <div className="flex-col flex gap-[19px] items-center">
+                  <Image src="images/pmg.svg" alt="oppgp" width={177} height={53}/>
+                  <p className="text-grey max-w-[507px] text-[16px] leading-[17px] text-center">В своей работе мы придерживаемся стандартов программы «Московский Гештальт Институт», а также стандартов Европейской Ассоциации Гештальт Терапии, Этического Кодекса Гештальт Терапевта и принципов гуманизма.</p>
+              </div>
+          </div>
+          <div className="flex flex-col mt-[100px]">
+              <div className="flex items-center max-w-[1033px] mx-auto justify-between w-full mb-[50px]">
+                  <Select name="Конференции" />
+                  <h3 className="text-black text-[26px] uppercase">Мероприятия сообщества</h3>
+                  <Button name="Все мероприятия" />
+              </div>
+              <div className="flex justify-around">
+                  {eventCards.map((card, index) => {
+                      return <EventCard title={card.title} description={card.description} key={index} />
+                  })}
+              </div>
+          </div>
+          <div className="flex flex-col mt-[90px] mb-[80px] gap-[56px]">
+              <div className="flex items-center max-w-[1033px] mx-auto justify-between w-full">
+                  <Select name="Тренер"/>
+                  <h3 className="text-black text-[26px] uppercase">наше сообщество</h3>
+                  <Button name="Все участники"/>
+              </div>
+              <div className="flex max-w-[1033px] m-auto justify-between w-full">
+                  {humans.map((human, index) => {
+                      return <HumanCard key={index} name={human.name} description={human.description} skills={human.skills} />
+                  })}
+              </div>
+          </div>
+          <NavSection />
       </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
   );
 }

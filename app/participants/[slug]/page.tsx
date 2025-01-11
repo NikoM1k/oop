@@ -5,6 +5,19 @@ import InfoItem from "@/components/info-item";
 import Image from "next/image";
 import SocialItem from "@/components/social-item";
 
+export async function generateStaticParams() {
+    // Моканные данные участников
+    const participants = [
+        { slug: '1' },
+        { slug: '2' },
+        { slug: '3' },
+    ];
+
+    return participants.map(participant => ({
+        slug: participant.slug,
+    }));
+}
+
 export default function Page() {
     return(
         <main>

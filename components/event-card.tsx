@@ -10,7 +10,7 @@ interface Props {
 
 const EventCard: React.FC<Props> = ({title, description, image}) => {
     return (
-        <Link href="events/event" className="border-[1px] border-white rounded-[6px] bg-darkGrey px-[13.5px] pt-[12px] pb-[35px] text-black">
+        <Link href="events/event-1" className="border-[1px] border-white rounded-[6px] bg-darkGrey px-[13.5px] pt-[12px] pb-[35px] text-black">
             {image ? <Image src={image} alt='image' width={288} height={177} /> :
                 <span className="flex w-[288px] h-[177px] bg-white"/>
             }

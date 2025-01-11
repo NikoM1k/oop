@@ -41,7 +41,7 @@ const HumanCard: React.FC<Props> = ({name, description, image, skills,post, vari
     };
 
     return (
-        <Link href="/participants/id" className={`${cardStyles[variant].main} backdrop-blur-custom border-[1px] border-white rounded-[6px] bg-darkWhite p-[10px] text-black w-fit shadow-custom`}>
+        <Link href="/participants/1" className={`${cardStyles[variant].main} backdrop-blur-custom border-[1px] border-white rounded-[6px] bg-darkWhite p-[10px] text-black w-fit shadow-custom`}>
             {image ? <Image src={image} alt='image' width={cardStyles[variant].img.w} height={cardStyles[variant].img.h} /> :
                 <Image src="/images/mok_human.svg" alt='image' width={cardStyles[variant].img.w} height={cardStyles[variant].img.h} className="rotate-[180deg]" />
             }

@@ -5,18 +5,18 @@ import InfoItem from "@/components/info-item";
 import HumanCard from "@/components/human-card";
 import SocialItem from "@/components/social-item";
 
-export async function generateStaticParams() {
-    // Моканные данные мероприятий
-    const events = [
-        { slug: 'event-1' },
-        { slug: 'event-2' },
-        { slug: 'event-3' },
-    ];
-
-    return events.map(event => ({
-        slug: event.slug,
-    }));
-}
+// export async function generateStaticParams() {
+//     // Моканные данные мероприятий
+//     const events = [
+//         { slug: 'event-1' },
+//         { slug: 'event-2' },
+//         { slug: 'event-3' },
+//     ];
+//
+//     return events.map(event => ({
+//         slug: event.slug,
+//     }));
+// }
 
 export default function Page() {
     const infoItems = [

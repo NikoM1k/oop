@@ -80,7 +80,7 @@ export default function Home() {
                   <h3 className="text-white text-[38px] mt-[214px] text-end leading-[41px]">
                       <span className="bg-darkBlue px-[12px] py-[3px] rounded-[18px]">Цель</span> нашего<br/>объединения:
                   </h3>
-                  <p className="ml-auto mt-[50px] text-start text-white text-[19px] leading-[20px] max-w-[400px]">взаимное
+                  <p className="ml-auto mt-[50px] text-start text-white text-[19px] leading-[20px] max-w-[400px] font-[700]">взаимное
                       обогащение профессиональными знаниями, идеями и опытом на конференциях и семинарах, в учебных
                       программах и на интенсивах, на специализациях и в супервизорских группах.</p>
               </div>
@@ -92,27 +92,27 @@ export default function Home() {
                              width={1} height={1}/>
                   </div>
                   <div
-                      className="flex flex-col items-center rounded-[25px] min-h-[234px] px-[68px] pt-[60px] border-[4px] border-white">
-                      <div className="flex">
+                      className="flex flex-col items-center rounded-[25px] min-h-[234px] px-[68px] pt-[40px] border-[4px] border-white">
+                      <div className="flex relative left-[-20px] bottom-[-10px]">
                           <AvatarImage imageUrl='avatar'/>
-                          <AvatarImage imageUrl='avatar' className="right-[35px] z-2"/>
-                          <AvatarImage imageUrl='avatar' className="right-[70px] z-3"/>
-                          <AvatarImage imageUrl='avatar' className="right-[105px] z-4"/>
+                          <AvatarImage imageUrl='avatar' className="right-[55px] z-2"/>
+                          <AvatarImage imageUrl='avatar' className="right-[105px] z-3"/>
+                          <AvatarImage imageUrl='avatar' className="right-[155px] z-4"/>
                       </div>
-                      <p className="text-blue font-[900] text-[26px] mt-[10px]">+ 145 учасников</p>
+                      <p className="text-blue font-[900] text-[26px]">+ 145 учасников</p>
                   </div>
               </div>
           </div>
           <div className="mt-[50px] flex gap-[64px] justify-center container mx-auto">
               <div className="flex-col flex gap-[35px] items-center">
                   <Image src="images/oppgp.svg" alt="oppgp" width={140} height={37}/>
-                  <p className="text-grey max-w-[300px] text-[16px] leading-[17px] text-center">Донецкое
+                  <p className="text-grey max-w-[300px] text-[16px] leading-[17px] text-center font-[700]">Донецкое
                       гештальт-сообщество является частью Всероссийского общества психологов практикующих
                       гештальт-подход (ОПП ГП). </p>
               </div>
               <div className="flex-col flex gap-[19px] items-center">
                   <Image src="images/pmg.svg" alt="oppgp" width={177} height={53}/>
-                  <p className="text-grey max-w-[507px] text-[16px] leading-[17px] text-center">В своей работе мы придерживаемся стандартов программы «Московский Гештальт Институт», а также стандартов Европейской Ассоциации Гештальт Терапии, Этического Кодекса Гештальт Терапевта и принципов гуманизма.</p>
+                  <p className="text-grey max-w-[507px] text-[16px] leading-[17px] text-center font-[700]">В своей работе мы придерживаемся стандартов программы «Московский Гештальт Институт», а также стандартов Европейской Ассоциации Гештальт Терапии, Этического Кодекса Гештальт Терапевта и принципов гуманизма.</p>
               </div>
           </div>
           <div className="flex flex-col mt-[100px]">

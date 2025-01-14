@@ -23,7 +23,7 @@ export default function Page() {
         <main>
             <Breadcrumbs/>
             <div className=" flex gap-[35px] max-w-[1032px] m-auto">
-                <div className="bg-white p-[15px] w-fit">
+                <div className="bg-white p-[15px] w-fit rounded-[6px]">
                    <Image className="rotate-[180deg]" src="/images/mok_human.svg" alt="human" width={335} height={355} />
                 </div>
                 <div className="flex flex-col">
@@ -74,7 +74,7 @@ export default function Page() {
                     </ul>
                 </div>
             </div>
-            <div className="flex flex-col gap-[30px] max-w-[910px] m-auto mb-[100px]">
+            <div className="flex flex-col gap-[30px] max-w-[910px] m-auto mb-[100px] font-[500]">
                 <h3 className="uppercase text-black text-[26px]">Описание профессиональной деятельности</h3>
                 <div className="text-[15px] leading-[24px]">
                     <p>Часто обращаются со следующими темами:</p>

@@ -16,8 +16,8 @@ const Select: React.FC<Props> = ({className, name, variant = 'default'}) => {
     };
 
     return(
-        <div className={`${className} ${variantClasses[variant]} w-fit cursor-pointer border-blue border-[1px] flex gap-[10px] rounded-[10px]`}>
-            <p className="text-blue font-[400] text-[16px]">{name}</p>
+        <div className={`${className} ${variantClasses[variant]} max-w-[225px] min-w-[180px] justify-center w-fit cursor-pointer border-blue border-[1px] flex gap-[10px] rounded-[10px]`}>
+            <p className="text-blue font-[700] text-[16px]">{name}</p>
             <Image src="/images/chevronDown.svg" alt="chevronDown" width={11} height={8} />
         </div>
     );

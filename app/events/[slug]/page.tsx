@@ -54,7 +54,7 @@ export default function Page() {
         <main>
             <Breadcrumbs/>
             <div className="bg-blue rounded-[6px] max-w-[1032px] m-auto mb-[30px] py-[45px] px-[100px]">
-                <p className="text-white text-[48px] text-center uppercase leading-[48px]">Базовая программа подготовки гештальт-терапевтов — добор</p>
+                <p className="text-white text-[40px] text-center uppercase leading-[48px]">Базовая программа подготовки гештальт-терапевтов — добор</p>
             </div>
             <div className="flex flex-col m-auto max-w-[1032px] gap-[50px] mb-[80px]">
                 <div className="flex gap-[23px]">
@@ -93,7 +93,7 @@ export default function Page() {
                         </div>
                     </div>
                 </div>
-                <div className="flex flex-col gap-[30px] max-w-[910px] m-auto">
+                <div className="flex flex-col gap-[30px] max-w-[910px] font-[300]">
                     <h3 className="uppercase text-black text-[26px]">содержание</h3>
                     <p className="text-[15px] leading-[24px]">
                         ОСНОВНЫЕ ТЕМЫ: 1. Основы гештальт-терапии. Исторические корни, основоположники гештальт-терапии,
@@ -119,15 +119,15 @@ export default function Page() {
                         этики
                     </p>
                 </div>
-                <div className="flex flex-col gap-[30px] max-w-[910px] m-auto">
+                <div className="flex flex-col gap-[30px] max-w-[910px] font-[300]">
                     <h3 className="uppercase text-black text-[26px]">Дополнительная информация</h3>
-                    <p className="text-[15px] leading-[24px]">
+                    <p className="text-[15px] leading-[24px] ">
                         Ведущие программы:<br/>Анжелика Мамченко - тренер, супервизор, гештальт терапевт,
                         клинический психолог, ведущая базовых программ, супервизорских, терапевтических групп и
                         специализаций «Гештальт подход в работе с психосоматикой», «Гештальт терапия в клинической
                         практике»<br/>Софья Пушкарева – психолог, супервизор, гештальт терапевт, ведущая терапевтических
                         и супервизорских групп <br/>Руководитель программы – Анжелика Мамченко. <br/>Запись на онлайн
-                        знакомство по телефону: Софья Пушкарева <span className="text-blue underline">+7 9265968715</span>, WhatsApp,Telegram,
+                        знакомство по телефону:<br/> Софья Пушкарева <span className="text-blue underline">+7 9265968715</span>, WhatsApp,Telegram,
                         почта <span className="text-blue underline">sida786@mail.ru</span> <br/>Запись в программу после онлайн знакомства.
                     </p>
                 </div>

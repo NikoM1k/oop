@@ -72,7 +72,7 @@ const Pagination: React.FC<PaginationProps> = ({
                     )
                 ))}
             </div>
-            <button className="flex items-center text-[15px] font-[400] ml-[26px] gap-[11px]" onClick={() => handlePageChange(currentPage + 1)} disabled={currentPage === totalPages}>
+            <button className="flex items-center text-[15px] font-[700] ml-[26px] gap-[11px]" onClick={() => handlePageChange(currentPage + 1)} disabled={currentPage === totalPages}>
                 Следующая страница
                 <Image className="rotate-[-90deg] relative top-[-2px]" src="/images/chevronDown.svg" alt="arrow" width={11} height={11} />
             </button>

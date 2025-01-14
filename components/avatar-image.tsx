@@ -12,8 +12,8 @@ const AvatarImage: React.FC<Props> =({ imageUrl, className}) => {
             src={`/images/${imageUrl}.png`}
             alt={imageUrl}
             className={`${className} relative`}
-            width={67}
-            height={67}
+            width={101}
+            height={100}
         />
     );
 }

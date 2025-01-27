@@ -1,3 +1,5 @@
+"use client";
+import React, { useState, useEffect } from 'react';
 import Breadcrumbs from "@/components/breadcrumb";
 import InfoBlock from "@/components/info-block";
 import NavSection from "@/components/nav-section";
@@ -19,6 +21,20 @@ import SocialItem from "@/components/social-item";
 // }
 
 export default function Page() {
+    const [isLg, setIsLg] = useState(false);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsLg(window.innerWidth >= 1024);
+        };
+
+        // Устанавливаем значение при первом рендере
+        handleResize();
+
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
     const infoItems = [
         {
             name: "Базовый курс"
@@ -53,24 +69,24 @@ export default function Page() {
     return(
         <main>
             <Breadcrumbs/>
-            <div className="bg-blue rounded-[6px] max-w-[1032px] m-auto mb-[30px] py-[45px] px-[100px]">
+            <div className="bg-blue rounded-[6px] max-w-[1033px] m-auto mb-[30px] py-[45px] lg:px-[100px]">
                 <p className="text-white text-[40px] text-center uppercase leading-[48px]">Базовая программа подготовки гештальт-терапевтов — добор</p>
             </div>
-            <div className="flex flex-col m-auto max-w-[1032px] gap-[50px] mb-[80px]">
-                <div className="flex gap-[23px]">
+            <div className="flex flex-col m-auto max-w-[1083px] px-[25px] gap-[50px] mb-[80px]">
+                <div className="flex gap-[10px] flex-wrap lg:gap-[23px] lg:justify-between">
                     {infoItems.map((item, index) => {
                         return <InfoItem variable="secondary" name={item.name} pathImg={item?.img} key={index}/>
                     })}
                 </div>
-                <div className="flex gap-[18px]">
+                <div className="flex justify-center flex-wrap lg:flex-nowrap lg:justify-between gap-[18px]">
                     {humanCards.map((card, index) => {
                         return <HumanCard name={card.name} post={card.post} skills={card.skills} key={index}
-                                          variant="secondary"/>
+                                          variant={isLg ? "secondary" : undefined}/>
                     })}
                 </div>
-                <div className="flex gap-[21px]">
+                <div className="flex-wrap xl:flex-nowrap flex gap-[21px]">
                     <div
-                        className="flex flex-col border-white border-[1px] rounded-[6px] min-w-[780px] h-[200px] px-[32px] justify-center gap-[12px]">
+                        className="order-2 xl:order-1 items-center xl:items-start flex flex-col border-white border-[1px] rounded-[6px] w-full xl:min-w-[780px] min-h-[200px] px-[32px] justify-center gap-[12px]">
                         <h4 className="text-black text-[26px] uppercase">формат мероприятия</h4>
                         <p className="text-black text-[15px] max-w-[640px]">Встречи проходят очно в формате двухдневок:
                             суббота, воскресенье раз в 1,5 - 2,5 месяца. Формы работы - групповые встречи, включающие
@@ -78,7 +94,7 @@ export default function Page() {
                             сессии в кругу, обсуждения и т.д.</p>
                     </div>
                     <div
-                        className="flex flex-col bg-white rounded-[12px] pt-[47px] pb-[34px] w-full pl-[32px] gap-[23px] relative">
+                        className="order-1 xl:order-2 justify-evenly flex xl:flex-col bg-white rounded-[12px] pt-[25px] pb-[10px] xl:pt-[47px] xl:pb-[34px] w-full xl:pl-[32px] gap-[23px] relative">
                         <div className="flex-col flex text-[18px]">
                             <span>+7 949 185 65 65 </span>
                             <span>+7 949 185 65 65 </span>

@@ -16,8 +16,8 @@ const Breadcrumbs: React.FC = () => {
     }
 
     return(
-        <nav className="max-w-[1032px] mx-auto">
-            <ol className="flex text-middleGrey font-[350] my-[50px]">
+        <nav className="max-w-[1083px] px-[25px] mx-auto">
+            <ol className="flex flex-wrap text-middleGrey font-[350] my-[50px]">
                 <li>
                     <Link href="/">главная</Link>
                 </li>

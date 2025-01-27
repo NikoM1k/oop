@@ -8,6 +8,10 @@
     backdrop-filter: blur(8.7px);
   }
 
+  .scale-x-flip {
+    @apply transform scale-x-[-1];
+  }
+
   .shadow-custom {
     box-shadow: 14px 18px 29.9px 0px rgba(0, 0, 0, 0.06);
   }
@@ -27,6 +31,7 @@
   --light-black: rgba(109, 109, 109, 1);
   --light-grey: rgba(114, 114, 114, 1);
   --middle-grey: rgba(141, 141, 141, 1);
+  --bg-grey: rgba(218, 218, 218, 1);
 }
 
 @media (prefers-color-scheme: dark) {

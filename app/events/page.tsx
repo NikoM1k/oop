@@ -66,21 +66,21 @@ export default function Page() {
     return (
         <main>
             <Breadcrumbs />
-            <div className="flex flex-col gap-[31px] items-center mb-[50px]">
-                <h1 className="text-[40px] uppercase">Мероприятия сообщества</h1>
-                <p className="text-[19px] max-w-[832px] text-center">это добровольное самоорганизующееся сообщество специалистов г. Донецка и Донецкого края в области психологического консультирования и гештальт-терапии.</p>
+            <div className="flex flex-col gap-[31px] items-center mb-[50px] px-[25px]">
+                <h1 className="text-[35px] text-center md:text-[40px] uppercase">Мероприятия сообщества</h1>
+                <p className="text-[17px] md:text-[19px] max-w-[832px] text-center">это добровольное самоорганизующееся сообщество специалистов г. Донецка и Донецкого края в области психологического консультирования и гештальт-терапии.</p>
             </div>
-            <div className="flex flex-col max-w-[1032px] m-auto">
-                <div className="flex gap-[84px] mb-[30px]">
+            <div className="flex flex-col max-w-[1083px] px-[25px] m-auto">
+                <div className="flex flex-col gap-[30px] items-center md:flex-row md:gap-[84px] mb-[30px]">
                     <Select name="Все мероприятия" variant="secondary" />
                     <FilterCheckbox />
                 </div>
-                <div className="flex flex-wrap gap-x-[12px] gap-y-[30px] mb-[80px] justify-between">
+                <div className="flex flex-wrap gap-x-[12px] gap-y-[30px] mb-[80px] justify-evenly lg:justify-between">
                     {eventCards.map((card, index) => {
                         return <EventCard title={card.title} description={card.description} key={index} />
                     })}
                 </div>
-                <div className="mb-[100px] flex justify-between">
+                <div className="mb-[100px] flex justify-between flex-col gap-[50px] md:flex-row">
                     <Pagination
                         totalItems={totalItems}
                         itemsPerPage={itemsPerPage}

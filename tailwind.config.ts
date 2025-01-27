@@ -21,7 +21,8 @@ export default {
         darkGrey: "var(--dark-grey)",
         lightBlack: "var(--light-black)",
         lightGrey: "var(--light-grey)",
-        middleGrey: "var(--middle-grey)"
+        middleGrey: "var(--middle-grey)",
+        bgGrey: "var(--bg-grey)",
       },
       fontFamily: {
         'gt-eesti': ['GT Eesti Pro Display', 'sans-serif'], // добавьте ваш шрифт

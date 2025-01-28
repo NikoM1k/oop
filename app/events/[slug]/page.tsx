@@ -1,39 +1,24 @@
-"use client";
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Breadcrumbs from "@/components/breadcrumb";
 import InfoBlock from "@/components/info-block";
 import NavSection from "@/components/nav-section";
-import InfoItem from "@/components/info-item";
-import HumanCard from "@/components/human-card";
 import SocialItem from "@/components/social-item";
+import ClientComponent from "@/components/client-component";
 
-// export async function generateStaticParams() {
-//     // Моканные данные мероприятий
-//     const events = [
-//         { slug: 'event-1' },
-//         { slug: 'event-2' },
-//         { slug: 'event-3' },
-//     ];
-//
-//     return events.map(event => ({
-//         slug: event.slug,
-//     }));
-// }
+export async function generateStaticParams() {
+    // Моканные данные мероприятий
+    const events = [
+        { slug: 'event-1' },
+        { slug: 'event-2' },
+        { slug: 'event-3' },
+    ];
+
+    return events.map(event => ({
+        slug: event.slug,
+    }));
+}
 
 export default function Page() {
-    const [isLg, setIsLg] = useState(false);
-
-    useEffect(() => {
-        const handleResize = () => {
-            setIsLg(window.innerWidth >= 1024);
-        };
-
-        // Устанавливаем значение при первом рендере
-        handleResize();
-
-        window.addEventListener('resize', handleResize);
-        return () => window.removeEventListener('resize', handleResize);
-    }, []);
 
     const infoItems = [
         {
@@ -73,17 +58,7 @@ export default function Page() {
                 <p className="text-white text-[40px] text-center uppercase leading-[48px]">Базовая программа подготовки гештальт-терапевтов — добор</p>
             </div>
             <div className="flex flex-col m-auto max-w-[1083px] px-[25px] gap-[50px] mb-[80px]">
-                <div className="flex gap-[10px] flex-wrap lg:gap-[23px] lg:justify-between">
-                    {infoItems.map((item, index) => {
-                        return <InfoItem variable="secondary" name={item.name} pathImg={item?.img} key={index}/>
-                    })}
-                </div>
-                <div className="flex justify-center flex-wrap lg:flex-nowrap lg:justify-between gap-[18px]">
-                    {humanCards.map((card, index) => {
-                        return <HumanCard name={card.name} post={card.post} skills={card.skills} key={index}
-                                          variant={isLg ? "secondary" : undefined}/>
-                    })}
-                </div>
+                <ClientComponent infoItems={infoItems} humanCards={humanCards} />
                 <div className="flex-wrap xl:flex-nowrap flex gap-[21px]">
                     <div
                         className="order-2 xl:order-1 items-center xl:items-start flex flex-col border-white border-[1px] rounded-[6px] w-full xl:min-w-[780px] min-h-[200px] px-[32px] justify-center gap-[12px]">

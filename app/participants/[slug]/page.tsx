@@ -23,12 +23,12 @@ export default function Page() {
         <main>
             <Breadcrumbs/>
             <div className=" flex flex-wrap justify-center gap-[35px] px-[25px] max-w-[1083px] m-auto">
-                <div className="bg-white p-[15px] w-fit rounded-[6px]">
+                <div className="bg-white p-[15px] w-fit rounded-[6px] mr-auto">
                    <Image className="rotate-[180deg]" src="/images/mok_human.svg" alt="human" width={335} height={355} />
                 </div>
                 <div className="flex flex-col w-full lg:w-auto">
-                    <h2 className="uppercase text-center lg:text-start lg:max-w-[390px] text-[40px] leading-[48px]">кириллов кирилл кириллович</h2>
-                    <div className="flex justify-center lg:justify-start gap-[17px] mt-[8px] mb-[25px]">
+                    <h2 className="uppercase lg:text-start lg:max-w-[390px] text-[40px] leading-[48px]">кириллов кирилл кириллович</h2>
+                    <div className="flex gap-[17px] mt-[8px] mb-[25px]">
                         <Image src="/images/location.svg" alt="location" width={18} height={22} />
                         <span className="text-lightBlack text-[18px]">Донецк</span>
                     </div>
@@ -73,7 +73,7 @@ export default function Page() {
                     </ul>
                 </div>
             </div>
-            <div className="flex flex-col gap-[30px] mx-[25px] lg:max-w-[910px] lg:mx-auto mb-[100px] font-[500]">
+            <div className="flex flex-col gap-[30px] mx-[25px] lg:max-w-[910px] lg:mx-auto mb-[100px] ">
                 <h3 className="uppercase text-black text-[26px]">Описание профессиональной деятельности</h3>
                 <div className="text-[15px] leading-[24px]">
                     <p>Часто обращаются со следующими темами:</p>

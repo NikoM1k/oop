@@ -11,12 +11,12 @@ interface Props {
 
 const Select: React.FC<Props> = ({className, name, variant = 'default'}) => {
     const variantClasses = {
-        default: 'px-[25px] py-[10px]',
+        default: '',
         secondary: 'px-[36px] py-[7px] bg-white',
     };
 
     return(
-        <div className={`${className} ${variantClasses[variant]} max-w-[225px] min-w-[180px] justify-center w-fit cursor-pointer border-blue border-[1px] flex gap-[10px] rounded-[10px]`}>
+        <div className={`${className} ${variantClasses[variant]} max-w-[225px] min-w-[180px] min-h-[39px] justify-center items-center w-fit cursor-pointer border-blue border-[1px] flex gap-[10px] rounded-[10px]`}>
             <p className="text-blue font-[700] text-[16px]">{name}</p>
             <Image src="/images/chevronDown.svg" alt="chevronDown" width={11} height={8} />
         </div>

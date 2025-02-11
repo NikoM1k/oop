@@ -54,15 +54,15 @@ export default function Page() {
     return(
         <main>
             <Breadcrumbs/>
-            <div className="bg-blue rounded-[6px] max-w-[1033px] m-auto mb-[30px] py-[45px] lg:px-[100px]">
+            <div className="bg-blue rounded-[6px] max-w-[1033px] mx-[25px] px-[30px] lg:mx-auto mb-[30px] py-[45px] lg:px-[100px]">
                 <p className="text-white text-[40px] text-center uppercase leading-[48px]">Базовая программа подготовки гештальт-терапевтов — добор</p>
             </div>
             <div className="flex flex-col m-auto max-w-[1083px] px-[25px] gap-[50px] mb-[80px]">
                 <ClientComponent infoItems={infoItems} humanCards={humanCards} />
                 <div className="flex-wrap xl:flex-nowrap flex gap-[21px]">
                     <div
-                        className="order-2 xl:order-1 items-center xl:items-start flex flex-col border-white border-[1px] rounded-[6px] w-full xl:min-w-[780px] min-h-[200px] px-[32px] justify-center gap-[12px]">
-                        <h4 className="text-black text-[26px] uppercase">формат мероприятия</h4>
+                        className="order-2 xl:order-1 items-center xl:items-start flex py-[30px] flex-col border-white border-[1px] rounded-[6px] w-full xl:min-w-[780px] min-h-[200px] px-[32px] justify-center gap-[12px]">
+                        <h4 className="text-black text-[26px] text-center md:text-start uppercase">формат мероприятия</h4>
                         <p className="text-black text-[15px] max-w-[640px]">Встречи проходят очно в формате двухдневок:
                             суббота, воскресенье раз в 1,5 - 2,5 месяца. Формы работы - групповые встречи, включающие
                             лекции, упражнения, групповую динамику, игры, эксперименты, арт-терапию, психодраму, личные

@@ -81,8 +81,8 @@ export default function Home() {
                   <h3 className="text-white text-[38px] text-start mt-[214px] md:text-end leading-[41px]">
                       <span className="bg-darkBlue px-[12px] py-[3px] rounded-[18px]">Цель</span> нашего<br/>объединения:
                   </h3>
-                  <p className="md:ml-auto mt-[50px] text-start text-white text-[19px] leading-[20px] max-w-[400px] font-[700]">взаимное
-                      обогащение профессиональными знаниями, идеями и опытом на конференциях и семинарах, в учебных
+                  <p className="md:ml-auto text-[16px] mt-[50px] text-start text-white md:text-[18px] leading-[20px] max-w-[400px] font-[700]">
+                      взаимное обогащение профессиональными знаниями, идеями и опытом на конференциях и семинарах, в учебных
                       программах и на интенсивах, на специализациях и в супервизорских группах.</p>
               </div>
               <div className="flex-col md:flex-row min-w-full lg:min-w-min lg:flex-col flex gap-[12px] max-w-[368px]">
@@ -137,7 +137,7 @@ export default function Home() {
                       <h3 className=" text-black text-center text-[26px] uppercase mx-[23px]">наше сообщество</h3>
                       <Image className="rotate-[-90deg] relative top-[-2px]" src="/images/chevronDown.svg" alt="arrow" width={11} height={11} />
                   </div>
-                  <Button className="hidden md:order-3" name="Все участники"/>
+                  <Button className="hidden md:order-3 md:flex" name="Все участники"/>
               </div>
               <div className="flex m-auto justify-center gap-[16px] w-full px-[25px] flex-wrap">
                   {humans.map((human, index) => {

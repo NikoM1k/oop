@@ -15,27 +15,30 @@ interface Props {
 const HumanCard: React.FC<Props> = ({name, description, image, skills,post, variant = 'default'}) => {
     const cardStyles = {
         default: {
-            main: "px-[9px] pt-[11px] pb-[25px]",
+            main: "px-[9px] pt-[11px] pb-[25px] max-w-[370px] w-full sm:max-w-[280px]",
             img: {
                 w: 260,
-                h: 181
+                h: 181,
+                class: 'w-full'
             },
-            name: "text-[18px]",
-            description: "",
-            blocks: ""
+            name: "text-[18px] max-w-full sm:max-w-[190px]",
+            description: "max-w-full sm:max-w-[220px]",
+            blocks: "max-w-full sm:max-w-[220px]"
         },
         secondary: {
             main: "flex w-full justify-between p-[11px]",
             img: {
                 w: 218,
-                h: 232
+                h: 232,
+                class: ''
             }
         },
         lg: {
             main: "",
             img: {
                 w: 303,
-                h: 303
+                h: 303,
+                class: ''
             },
             name: "text-[20px] max-w-full",
             description: "max-w-[300px]",
@@ -46,7 +49,7 @@ const HumanCard: React.FC<Props> = ({name, description, image, skills,post, vari
     return (
         <Link href="/participants/1" className={` backdrop-blur-custom border-[1px] border-white rounded-[15px] bg-darkWhite text-black w-fit shadow-custom ${cardStyles[variant].main}`}>
             {image ? <Image src={image} alt='image' width={cardStyles[variant].img.w} height={cardStyles[variant].img.h} /> :
-                <Image src={variant === "secondary" ? "/images/mok_human2.svg" :"/images/mok_human_new.svg"} alt='image' width={cardStyles[variant].img.w} height={cardStyles[variant].img.h} className="rotate-[180deg]" />
+                <Image src={variant === "secondary" ? "/images/mok_human2.svg" :"/images/mok_human_new.svg"} alt='image' width={cardStyles[variant].img.w} height={cardStyles[variant].img.h} className={`rotate-[180deg] ${cardStyles[variant].img.class}`} />
             }
             {(variant === 'default' || variant === 'lg') &&
             <div className="px-[13px]">
@@ -61,7 +64,7 @@ const HumanCard: React.FC<Props> = ({name, description, image, skills,post, vari
                     })}
                     {skills.length > 3 &&
                         <div className="bg-bgGrey rounded-[6px] w-[28px] h-[28px] flex justify-center items-center">
-                            <span className="text-white text-[13px] font-[400]">+{skills.length - 3}</span>
+                            <span className="text-white text-[13px] font-[400] max-h-[15px] flex items-center relative top-[1px]"><span className="relative top-[-0.5px]">+</span>{skills.length - 3}</span>
                         </div>
                     }
                 </div>
@@ -78,7 +81,7 @@ const HumanCard: React.FC<Props> = ({name, description, image, skills,post, vari
                         })}
                         {skills.length > 3 &&
                             <div className="bg-bgGrey rounded-[6px] w-[28px] h-[28px] flex justify-center items-center">
-                                <span className="text-white text-[13px] font-[400]">+{skills.length - 3}</span>
+                                <span className="text-white text-[13px] font-[400] max-h-[15px] flex items-center relative top-[1px]"><span className="relative top-[-0.5px]">+</span>{skills.length - 3}</span>
                             </div>
                         }
                     </div>

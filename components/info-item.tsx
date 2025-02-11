@@ -23,7 +23,7 @@ const InfoItem: React.FC<Props> = ({name, variable = 'default', pathImg}) => {
     return (
         <div className={`flex items-center justify-center font-[400] border-blue w-fit ${selectedVariantClasses}`}>
             {pathImg && <Image src={`/images/${pathImg}.svg`} alt={pathImg} width={18} height={18} />}
-            <span className="relative top-[2px]">{name}</span>
+            <span className="">{name}</span>
         </div>
     );
 }

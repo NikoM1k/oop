@@ -35,7 +35,7 @@ const ClientComponent: React.FC<ClientComponentProps> = ({ infoItems, humanCards
 
     return (
         <>
-            <div className="flex gap-[10px] flex-wrap lg:gap-[23px] lg:justify-between">
+            <div className="flex gap-[10px] flex-wrap lg:gap-[23px] justify-between lg:justify-start">
                 {infoItems.map((item, index) => (
                     <InfoItem key={index} variable="secondary" name={item.name} pathImg={item.img} />
                 ))}
